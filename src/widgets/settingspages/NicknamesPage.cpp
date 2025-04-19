@@ -95,7 +95,7 @@ void NicknamesPage::importNicknames()
     }
 
     QJsonArray array = doc.array();
-    for (const QJsonValue &value : array)
+    for (const QJsonValueRef &value : array)
     {
         if (!value.isObject())
         {
