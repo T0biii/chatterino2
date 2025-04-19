@@ -48,7 +48,7 @@ NicknamesPage::NicknamesPage()
     });
 
     // Add Import and Export buttons to the EditableModelView
-    auto importButton = new QPushButton("Import");
+    auto *importButton = new QPushButton("Import");
     auto exportButton = new QPushButton("Export");
 
     QObject::connect(importButton, &QPushButton::clicked, this,
