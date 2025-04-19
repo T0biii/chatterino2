@@ -58,7 +58,7 @@ NicknamesPage::NicknamesPage()
 
     view->addCustomButton(importButton);
     view->addCustomButton(exportButton);
-    
+
     QTimer::singleShot(1, [view] {
         view->getTableView()->resizeColumnsToContents();
         view->getTableView()->setColumnWidth(0, 200);
@@ -85,7 +85,7 @@ void NicknamesPage::importNicknames()
 
     QByteArray data = file.readAll();
     QJsonDocument doc = QJsonDocument::fromJson(data);
-    
+
     if (doc.isNull() || !doc.isArray())
     {
         QMessageBox::critical(
